@@ -1,0 +1,12 @@
+{
+
+  "HomepageLocation": "https://search.brave.com",
+  "RestoreOnStartup": 4,
+  "RestoreOnStartupURLs": ["https://search.brave.com"],
+  "ShowHomeButton": true,
+  "BookmarkBarEnabled": true,
+  "BrowserLabsEnabled": false,
+  "DefaultSearchProviderEnabled": true
+
+
+}
