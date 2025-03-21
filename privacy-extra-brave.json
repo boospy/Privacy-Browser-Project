@@ -1,0 +1,8 @@
+{
+    "BraveRewardsDisabled": 1,
+    "BraveWalletDisabled": 1,
+    "BraveShieldsDisabledForUrls": [
+      "https://discuss.kde.org",
+      "https://community.brave.com"
+  ]
+}

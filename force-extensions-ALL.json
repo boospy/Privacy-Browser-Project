@@ -1,0 +1,16 @@
+{
+  "ExtensionInstallForcelist": [
+    "ddkjiahejlhfcafbddmgiahcphecmpfh", //Ublock Origin Lite
+    "cimiefiiaegbelhefglklhhakcgmhkai", //Plasma Integration
+    "oldceeleldhonbafppcapldpdifcinji", //LanguageTool
+    "mlomiejdfkolichcflejclcbmpeaniij", //Ghostery Tracker & Ad Blocker | Privacy AdBlocker
+    "doojmbjmlfjjnbmnoijecmcbfeoakpjm", //NoScript
+    "nngceckbapebfimnlniiiahkandclblb", //Bitwarden Password-Manager
+    "kplfenefaakjhjkklghidleljeocgdap", //Qwant - alternate Search-Engine
+    "lmjnegcaeklhafolokijcfjliaokphfk", //Video DownloadHelper
+    "fnaicdffflnofjppbagibeoednhnbjhg", //floccus bookmarks sync
+    "cofdbpoegempjloogbagkncekinflcnj", //DeepL: KI-translator and writing assistant
+    "eimadpbcbfnmbkopoojfekhnkhdbieeh" //Dark Reader
+
+  ]
+}

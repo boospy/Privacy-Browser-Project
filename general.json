@@ -1,12 +1,8 @@
 {
-
-  "HomepageLocation": "https://search.brave.com",
+  "HomepageLocation": "https://qwant.com",
   "RestoreOnStartup": 4,
-  "RestoreOnStartupURLs": ["https://search.brave.com"],
+  "RestoreOnStartupURLs": ["https://qwant.com"],
   "ShowHomeButton": true,
   "BookmarkBarEnabled": true,
-  "BrowserLabsEnabled": false,
-  "DefaultSearchProviderEnabled": true
-
-
+  "BrowserLabsEnabled": false
 }

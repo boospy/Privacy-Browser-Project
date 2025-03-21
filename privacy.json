@@ -27,6 +27,7 @@
   "UrlKeyedAnonymizedDataCollectionEnabled": false,
   "NetworkPredictionOptions": 2,
   "MetricsReportingEnabled": false,
+  "PaymentMethodQueryEnabled": false,
   "EnableMediaRouter": false
 
 }
