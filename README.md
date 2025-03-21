@@ -19,7 +19,7 @@ There are some quite good derivatives, such as [Brave browser](https://brave.com
 ### Chromium installation for Ubuntu 24.04 LTS
 The following script uninstalls the snap (if it is installed), gives the new package source the higher priority and installs Chromium as a Deb package. Many thanks to https://freeshell.de, who maintain the Chromium DEB package. 
 ~~~
-wget XXX/deb-chromium.sh
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/deb-chromium.sh
 chmod +x deb-chromium.sh
 ./deb-chromium.sh
 ~~~
@@ -132,6 +132,7 @@ Other example extensions that you can add/replace with the ID:
 
 ~~~
 mkdir -p /etc/chromium/policies/managed
+cd /etc/chromium/policies/managed
 wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/force-extensions.json
 wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/general.json
 wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/privacy.json
