@@ -132,13 +132,19 @@ Other example extensions that you can add/replace with the ID:
 
 ~~~
 mkdir -p /etc/chromium/policies/managed
-wget XXX/force-extensions.json
-wget XXX/general.json
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/force-extensions.json
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/general.json
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/privacy.json
 ~~~
 
 Or alternatively, all of the above extensions managed:
 ~~~
-wget XXX/force-extensions-ALL.json
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/force-extensions-ALL.json
+~~~
+
+And some extra options for using brave as your webbrowser:
+~~~
+wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/privacy-extra-brave.json
 ~~~
 
 Options can always be manually adjusted. After saving the changes, Chromium does not have to be closed. Changes are applied immediately. If there are syntax errors, all options are immediately disabled. You will see this immediately in the Chromium settings ;)
