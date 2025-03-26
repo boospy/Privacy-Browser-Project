@@ -1,0 +1,9 @@
+{
+  "3rdparty": {
+  "extensions": {
+  "oldceeleldhonbafppcapldpdifcinji": {
+      "apiServerUrl": "http://your_own_lt_server:8010/v2"
+      }
+    }
+  }
+}

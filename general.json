@@ -4,5 +4,6 @@
   "RestoreOnStartupURLs": ["https://qwant.com"],
   "ShowHomeButton": true,
   "BookmarkBarEnabled": true,
+  "HomepageIsNewTabPage": false,
   "BrowserLabsEnabled": false
 }

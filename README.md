@@ -32,15 +32,11 @@ apt install chromium
 
 ### Brave installation on Ubuntu 24.04 LTS, Debian Bookworm and Proxmox 8.x
 ~~~
-apt install curl
-
+apt install curl -y
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"| tee /etc/apt/sources.list.d/brave-browser-release.list
-
 apt update
-
-apt install brave-browser
+apt install brave-browser -y
 ~~~
 Source: https://brave.com/linux/
 
@@ -59,49 +55,50 @@ mkdir -p /etc/brave/policies/managed
 The config has nothing to do with privacy and is only used for global options that you may want to set.
 This table provides an overview of the configured [Google Chrome policies](https://chromeenterprise.google/policies/) and their explanations.
 
-| Option                     | Explanation                                                                     |
-|----------------------------|---------------------------------------------------------------------------------|
-| `HomepageLocation`         | Sets the homepage of Chromium.                                                  |
+| Option                     | Explanation                                                                      |
+|----------------------------|----------------------------------------------------------------------------------|
+| `HomepageLocation`         | Sets the homepage of Chromium.                                                   |
 | `RestoreOnStartup`         | Defines what is loaded when Chromium starts (e.g., restore the previous session). |
-| `RestoreOnStartupURLs`     | Contains a list of URLs that open when Chromium starts.                           |
-| `ShowHomeButton`           | Enables or disables the home button in the toolbar.                             |
-| `BookmarkBarEnabled`       | Enables or disables the bookmarks bar.                                          |
-| `BrowserLabsEnabled`       | Enables or disables experimental BrowserLabs features.                          |
+| `RestoreOnStartupURLs`     | Contains a list of URLs that open when Chromium starts.                          |
+| `ShowHomeButton`           | Enables or disables the home button in the toolbar.                              |
+| `BookmarkBarEnabled`       | Enables or disables the bookmarks bar.                                           |
+| `HomepageIsNewTabPage`     | Enables or disables the tabpage by clicking on the "home-button"                 |
+| `BrowserLabsEnabled`       | Enables or disables experimental BrowserLabs features.                           |
 
 ### Details of privacy.json
 
-| Option                                          | Explanation           |
-|-------------------------------------------------|-----------------------|
-| `BrowserSignin`                                 | Controls whether users can sign in to Chrome (0 = disabled). |
-| `SyncDisabled`                                  | Enables or disables Chrome Sync. |
-| `SpellcheckEnabled`                             | Enables or disables spell check. |
-| `SafeBrowsingEnabled`                           | Enables or disables Google Safe Browsing. |
-| `TranslateEnabled`                              | Enables or disables automatic webpage translation. |
-| `AutofillAddressEnabled`                        | Enables or disables autofill for addresses. |
-| `AutofillCreditCardEnabled`                     | Enables or disables autofill for credit cards. |
-| `AutofillProfileEnabled`                        | Enables or disables profile-based autofill. |
-| `AlternateErrorPagesEnabled`                    | Enables or disables alternative error pages. |
-| `SearchSuggestEnabled`                          | Enables or disables search suggestions. |
-| `BlockThirdPartyCookies`                        | Blocks or allows third-party cookies. |
-| `DefaultThirdPartyStoragePartitioningSetting`   | Controls third-party storage partitioning (2 = strict mode). |
-| `CloudPrintProxyEnabled`                        | Enables or disables Google Cloud Print. |
-| `ScreenCaptureAllowed`                          | Allows or prevents screen capture. |
-| `LiveTranslateEnabled`                          | Enables or disables live translation. |
-| `RemoteAccessHostAllowRemoteAccessConnections`  | Allows or blocks remote access connections. |
-| `RemoteAccessHostAllowRemoteSupportConnections` | Allows or blocks remote support connections. |
-| `DisableScreenshots`                            | Prevents users from taking screenshots. |
-| `FeedbackSurveysEnabled`                        | Enables or disables feedback surveys. |
-| `DomainReliabilityEnabled`                      | Enables or disables domain reliability monitoring. |
-| `DomainReliabilityAllowed`                      | Controls whether domain reliability is allowed. |
-| `PrivacySandboxEnabled`                         | Enables or disables the Privacy Sandbox. |
-| `BackgroundModeEnabled`                         | Enables or disables Chrome background processes. |
-| `NetworkTimeQueriesEnabled`                     | Enables or disables network time synchronization queries. |
-| `DefaultAppsEnabled`                            | Enables or disables the installation of default Chrome apps. |
-| `UrlKeyedAnonymizedDataCollectionEnabled`       | Controls whether anonymized URL-keyed data collection is allowed. |
+| Option                                          | Explanation                                                                                            |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `BrowserSignin`                                 | Controls whether users can sign in to Chrome (0 = disabled).                                           |
+| `SyncDisabled`                                  | Enables or disables Chrome Sync.                                                                       |
+| `SpellcheckEnabled`                             | Enables or disables spell check.                                                                       |
+| `SafeBrowsingEnabled`                           | Enables or disables Google Safe Browsing.                                                              |
+| `TranslateEnabled`                              | Enables or disables automatic webpage translation.                                                     |
+| `AutofillAddressEnabled`                        | Enables or disables autofill for addresses.                                                            |
+| `AutofillCreditCardEnabled`                     | Enables or disables autofill for credit cards.                                                         |
+| `AutofillProfileEnabled`                        | Enables or disables profile-based autofill.                                                            |
+| `AlternateErrorPagesEnabled`                    | Enables or disables alternative error pages.                                                           |
+| `SearchSuggestEnabled`                          | Enables or disables search suggestions.                                                                |
+| `BlockThirdPartyCookies`                        | Blocks or allows third-party cookies.                                                                  |
+| `DefaultThirdPartyStoragePartitioningSetting`   | Controls third-party storage partitioning (2 = strict mode).                                           |
+| `CloudPrintProxyEnabled`                        | Enables or disables Google Cloud Print.                                                                |
+| `ScreenCaptureAllowed`                          | Allows or prevents screen capture.                                                                     |
+| `LiveTranslateEnabled`                          | Enables or disables live translation.                                                                  |
+| `RemoteAccessHostAllowRemoteAccessConnections`  | Allows or blocks remote access connections.                                                            |
+| `RemoteAccessHostAllowRemoteSupportConnections` | Allows or blocks remote support connections.                                                           |
+| `DisableScreenshots`                            | Prevents users from taking screenshots.                                                                |
+| `FeedbackSurveysEnabled`                        | Enables or disables feedback surveys.                                                                  |
+| `DomainReliabilityEnabled`                      | Enables or disables domain reliability monitoring.                                                     |
+| `DomainReliabilityAllowed`                      | Controls whether domain reliability is allowed.                                                        |
+| `PrivacySandboxEnabled`                         | Enables or disables the Privacy Sandbox.                                                               |
+| `BackgroundModeEnabled`                         | Enables or disables Chrome background processes.                                                       |
+| `NetworkTimeQueriesEnabled`                     | Enables or disables network time synchronization queries.                                              |
+| `DefaultAppsEnabled`                            | Enables or disables the installation of default Chrome apps.                                           |
+| `UrlKeyedAnonymizedDataCollectionEnabled`       | Controls whether anonymized URL-keyed data collection is allowed.                                      |
 | `NetworkPredictionOptions`                      | Controls network prediction settings, Websites are preloaded based on surfing behavior. (2 = disabled). |
-| `MetricsReportingEnabled`                       | Enables or disables Chrome usage and crash reporting. |
-| `PaymentMethodQueryEnabled`                     | Websites allow you to check whether a user has saved payment methods.                      |
-| `EnableMediaRouter`                             | Enables or disables the Chrome Media Router. |
+| `MetricsReportingEnabled`                       | Enables or disables Chrome usage and crash reporting.                                                  |
+| `PaymentMethodQueryEnabled`                     | Websites allow you to check whether a user has saved payment methods.                                  |
+| `EnableMediaRouter`                             | Enables or disables the Chrome Media Router (chromecast).                                              |
 
 
 ### Details of forced-extensions.json

@@ -1,0 +1,11 @@
+{
+  "3rdparty": {
+  "extensions": {
+  "nngceckbapebfimnlniiiahkandclblb": {
+      "environment": {
+        "base": "https://your_own_vaultwarden_server"
+        }
+      }
+    }
+  }
+}
