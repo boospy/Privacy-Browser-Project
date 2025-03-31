@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# script LinuxWelt; author: David Wolski, Thorsten Eggeling <pcwelt@gmail.com>;
+# script LinuxWelt; author: David Wolski, Thorsten Eggeling <pcwelt@gmail.com>, changed from Mario Loderer <linux@osit.cc>;
 cat <<HEREDOC
 
 .____    .__                     __      __       .__   __
@@ -21,6 +21,8 @@ deshalb zuerst exportiert/gespeichert werden.
 
 Einige Aktionen benötigen root-Rechte und das Script wird dann
 'sudo' vor den betreffenden Befehlen aufrufen.
+
+Das Script installiert zusäztlich ein Set von Json-Settings.
 
 HEREDOC
 
@@ -74,7 +76,14 @@ echo 'Unattended-Upgrade::Origins-Pattern {"site=freeshell.de"};' | $SUDO tee /e
 $SUDO apt update 
 $SUDO apt install -y chromium
 
+mkdir -p /etc/chromium/policies/managed
+wget -O /etc/chromium/policies/managed/privacy.json https://git.osit.cc/public-projects/pbp/-/raw/main/privacy.json
+wget -O /etc/chromium/policies/managed/allowed-cookies.json https://git.osit.cc/public-projects/pbp/-/raw/main/allowed-cookies.json
+wget -O /etc/chromium/policies/managed/forced-extensions-brave.json https://git.osit.cc/public-projects/pbp/-/raw/main/forced-extensions-chromium.json
+wget -O /etc/chromium/policies/managed/general.json https://git.osit.cc/public-projects/pbp/-/raw/main/general.json
+
 cat <<EOF
+
 
 Alles erledigt. Um Chromium wieder als Snap zu installieren, bitte die
 Dateien '/etc/apt/preferences.d/phd-chromium-browser',

@@ -1,5 +1,5 @@
 {
-    "BraveRewardsDisabled": true,
+    "BraveRewardsDisabled": false,
     "BraveWalletDisabled": false,
     "BraveShieldsDisabledForUrls": [
       "https://discuss.kde.org",
