@@ -181,7 +181,7 @@ The following script uninstalls the snap (if it is installed), gives the new pac
 
 Execute the commands as root.
 ~~~
-wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/install-chromium-deb.sh
+wget https://git.osit.cc/public-projects/pbp/-/raw/main/install-chromium-deb.sh
 chmod +x install-chromium-deb.sh
 ./install-chromium-deb.sh
 ~~~
@@ -190,10 +190,9 @@ Chromium can be installed from the existing package sources under Debian Bookwor
 
 Execute the commands as root.
 ~~~
-apt install chromium
-~~~
-And install json-options:
-~~~
+apt update
+apt install chromium -y
+
 mkdir -p /etc/chromium/policies/managed
 wget -O /etc/chromium/policies/managed/privacy.json https://git.osit.cc/public-projects/pbp/-/raw/main/privacy.json
 wget -O /etc/chromium/policies/managed/allowed-cookies.json https://git.osit.cc/public-projects/pbp/-/raw/main/allowed-cookies.json
@@ -210,7 +209,7 @@ What the script do:
 
 Execute the commands as root.
 ~~~
-wget https://git.osit.cc/public-projects/chromium-json-options/-/raw/main/install-brave-deb.sh
+wget https://git.osit.cc/public-projects//-/raw/main/install-brave-deb.sh
 chmod +x install-brave-deb.sh
 ./install-brave-deb.sh
 ~~~
