@@ -52,7 +52,7 @@ Or for using Brave-Browser (DEB-installation):
 mkdir -p /etc/brave/policies/managed
 ~~~
 
-**Attention!** Each `forced-extensions-<browser>.json` also installs and activates the Browser Extensions “[NoScript](https://noscript.net/)”.
+> 💡**Attention!** Each `forced-extensions-<browser>.json` also installs and activates the Browser Extensions “[NoScript](https://noscript.net/)”.
 
 _...This browser extension allows JavaScript and other potentially harmful content to be executed only by trusted web sites of your choice (e.g. your online bank).
 NoScript also provides the most powerful anti-XSS protection ever available in a browser.
@@ -218,14 +218,22 @@ chmod +x install-brave-deb.sh
 ## Additional options for extensions
 
 ### bitwarden.json
-If you run your own Bitwarden/Vaultwarden server, you can use it to set the FQDN/IP of your server in the extension.
+If you run your own Bitwarden/[Vaultwarden server](https://github.com/dani-garcia/vaultwarden), you can use it to set the FQDN/IP of your server in the extension.
 ~~~
+# For Chromium
 wget -O /etc/chromium/policies/managed/bitwarden.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/bitwarden.json
+
+# For Brave 
+wget -O /etc/brave/policies/managed/bitwarden.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/bitwarden.json
 ~~~
 
 
 ### language-tool.json
 If you run [your own Language-Tool](https://github.com/Erikvl87/docker-languagetool) server, you can use it to set the FQDN/IP of your server in the extension.
 ~~~
+# For Chromium
 wget -O /etc/chromium/policies/managed/language-tool.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/language-tool.json
+
+# For Brave
+wget -O /etc/brave/policies/managed/language-tool.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/language-tool.json
 ~~~
