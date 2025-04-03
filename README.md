@@ -219,21 +219,27 @@ chmod +x install-brave-deb.sh
 
 ### bitwarden.json
 If you run your own Bitwarden/[Vaultwarden server](https://github.com/dani-garcia/vaultwarden), you can use it to set the FQDN/IP of your server in the extension.
-~~~
-# For Chromium
-wget -O /etc/chromium/policies/managed/bitwarden.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/bitwarden.json
 
-# For Brave 
+For Chromium:
+~~~
+wget -O /etc/chromium/policies/managed/bitwarden.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/bitwarden.json
+~~~
+
+For Brave:
+~~~
 wget -O /etc/brave/policies/managed/bitwarden.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/bitwarden.json
 ~~~
 
 
 ### language-tool.json
 If you run [your own Language-Tool](https://github.com/Erikvl87/docker-languagetool) server, you can use it to set the FQDN/IP of your server in the extension.
-~~~
-# For Chromium
-wget -O /etc/chromium/policies/managed/language-tool.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/language-tool.json
 
-# For Brave
+For Chromium:
+~~~
+wget -O /etc/chromium/policies/managed/language-tool.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/language-tool.json
+~~~
+
+For Brave:
+~~~
 wget -O /etc/brave/policies/managed/language-tool.json https://git.osit.cc/public-projects/pbp/-/raw/main/extensions_settings/language-tool.json
 ~~~
