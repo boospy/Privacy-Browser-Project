@@ -209,7 +209,7 @@ What the script do:
 
 Execute the commands as root.
 ~~~
-wget https://git.osit.cc/public-projects//-/raw/main/install-brave-deb.sh
+wget https://git.osit.cc/public-projects/pbp/-/raw/main/install-brave-deb.sh
 chmod +x install-brave-deb.sh
 ./install-brave-deb.sh
 ~~~
