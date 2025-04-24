@@ -79,7 +79,7 @@ $SUDO apt install -y chromium
 mkdir -p /etc/chromium/policies/managed
 wget -O /etc/chromium/policies/managed/privacy.json https://git.osit.cc/public-projects/pbp/-/raw/main/privacy.json
 wget -O /etc/chromium/policies/managed/allowed-cookies.json https://git.osit.cc/public-projects/pbp/-/raw/main/allowed-cookies.json
-wget -O /etc/chromium/policies/managed/forced-extensions-brave.json https://git.osit.cc/public-projects/pbp/-/raw/main/forced-extensions-chromium.json
+wget -O /etc/chromium/policies/managed/forced-extensions-chromium.json https://git.osit.cc/public-projects/pbp/-/raw/main/forced-extensions-chromium.json
 wget -O /etc/chromium/policies/managed/general.json https://git.osit.cc/public-projects/pbp/-/raw/main/general.json
 
 cat <<EOF
