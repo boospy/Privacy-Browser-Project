@@ -116,7 +116,7 @@ This table provides an overview of the configured [Google Chrome policies](https
 | `UrlKeyedAnonymizedDataCollectionEnabled`       | Controls whether anonymized URL-keyed data collection is allowed.                                       |
 | `NetworkPredictionOptions`                      | Controls network prediction settings, Websites are preloaded based on surfing behavior. (2 = disabled). |
 | `MetricsReportingEnabled`                       | Enables or disables Chrome usage and crash reporting.                                                   |
-| `DefaultCookiesSetting` (disabled)              | Configure the default behavior for cookies. [See docs for more information.](https://chromeenterprise.google/policies/#DefaultCookiesSetting)|
+| `DefaultCookiesSetting` (set default to 1)      | Configure the default behavior for cookies. [See docs for more information.](https://chromeenterprise.google/policies/#DefaultCookiesSetting)|
 | `PaymentMethodQueryEnabled`                     | Websites allow you to check whether a user has saved payment methods.                                   |
 | `EnableMediaRouter`                             | Enables or disables the Chrome Media Router (chromecast).                                               |
 
